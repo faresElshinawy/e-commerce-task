@@ -36,6 +36,12 @@ function selectallusrs($conn){
     return $result;
 }
 
+function selectallusrsdash($conn){
+    $sql = 'SELECT * FROM users LIMIT 5';
+    $result = mysqli_query($conn,$sql);
+    return $result;
+}
+
 function searchforuser($conn,$name){
     $sql = "SELECT * FROM users WHERE name = '$name'";
     $result = mysqli_query($conn,$sql);
@@ -106,6 +112,12 @@ function getcategoriesinfo($conn){
     return $result;
 }
 
+function getcategoriesinfodash($conn){
+    $sql = "SELECT * FROM categories LIMIT 4";
+    $result = mysqli_query($conn,$sql);
+    return $result;
+}
+
 function deletecategories($conn,$id){
     $sql = "DELETE FROM categories WHERE id = '$id'";
     mysqli_query($conn,$sql);
@@ -140,6 +152,12 @@ function getcategoryproducts($conn,$id){
 
 function getproductsinfo($conn){
     $sql = "SELECT * FROM products ";
+    $result = mysqli_query($conn,$sql);
+    return $result;
+}
+
+function getproductsinfodash($conn){
+    $sql = "SELECT * FROM products LIMIT 6";
     $result = mysqli_query($conn,$sql);
     return $result;
 }

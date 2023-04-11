@@ -41,7 +41,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <?php
-                                                    $result = selectallusrs($conn);
+                                                    $result = selectallusrsdash($conn);
                                                     while($row = mysqli_fetch_assoc($result)):
                                                         ?>
                                                     <tr>
@@ -80,7 +80,7 @@
                                                 </thead>
                                                     <tbody>
                                                         <?php
-                                                            $data = getcategoriesinfo($conn);
+                                                            $data = getcategoriesinfodash($conn);
                                                             while($row = mysqli_fetch_assoc($data)):
                                                         ?>
                                                             <tr>
@@ -119,7 +119,7 @@
                                                 </thead>
                                                 <tbody>
                                                         <?php 
-                                                            $result = getproductsinfo($conn);
+                                                            $result = getproductsinfodash($conn);
                                                             while($row = mysqli_fetch_assoc($result)):
                                                                 ?>
                                                             <tr>

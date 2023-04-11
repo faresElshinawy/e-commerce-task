@@ -12,8 +12,8 @@ if(checkrequestmethod('POST')){
         $errors['name'] = 'category name is require'; 
     }elseif(minlen($name,5)){
         $errors['name'] = 'category name must be greater than 5 characters';
-    }elseif(maxlen($name,10)){
-        $errors['name'] = 'category name must be smaller than 10 characters';
+    }elseif(maxlen($name,20)){
+        $errors['name'] = 'category name must be smaller than 20 characters';
     }
     if(empty($errors)){
         insertnewcategory($conn,$name);
