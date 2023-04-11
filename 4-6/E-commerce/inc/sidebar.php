@@ -64,7 +64,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">products control</h6>
                         <a class="collapse-item" href="products.php">show </a>
-                        <a class="collapse-item" href="add_product.php">add new</a>
+                        <a class="collapse-item" href="add_products.php">add new</a>
                     </div>
                 </div>
             </li>
@@ -74,7 +74,7 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-                CATEGORYS
+                CATEGORIES
             </div>
             <!-- Nav Item - Tables -->
 
@@ -85,13 +85,13 @@
                     <path d="M3 2v4.586l7 7L14.586 9l-7-7H3zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2z"/>
                     <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z"/>
                     </svg>
-                    <span>categorys</span>
+                    <span>categories</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">categorys control</h6>
-                        <a class="collapse-item" href="categorys.php">show </a>
-                        <a class="collapse-item" href="add_category.php">add new</a>
+                        <h6 class="collapse-header">categories control</h6>
+                        <a class="collapse-item" href="categories.php">show </a>
+                        <a class="collapse-item" href="add_categories.php">add new</a>
                     </div>
                 </div>
             </li>

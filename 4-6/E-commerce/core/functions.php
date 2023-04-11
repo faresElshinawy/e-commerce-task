@@ -100,32 +100,32 @@ function dealwithimage($file,$new_path){
 
 // category function
 
-function getcategorysinfo($conn){
-    $sql = "SELECT * FROM categorys";
+function getcategoriesinfo($conn){
+    $sql = "SELECT * FROM categories";
     $result = mysqli_query($conn,$sql);
     return $result;
 }
 
-function deletecategorys($conn,$id){
-    $sql = "DELETE FROM categorys WHERE id = '$id'";
+function deletecategories($conn,$id){
+    $sql = "DELETE FROM categories WHERE id = '$id'";
     mysqli_query($conn,$sql);
     }
     
 
 function insertnewcategory($conn,$data){
-    $sql = "INSERT INTO categorys(name) VALUES ('$data')";
+    $sql = "INSERT INTO categories(name) VALUES ('$data')";
     mysqli_query($conn,$sql);
 }
 
 function getcategorybyid($conn,$id){
-    $sql = "SELECT * FROM categorys WHERE id = '$id'";
+    $sql = "SELECT * FROM categories WHERE id = '$id'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($result);
     return $row;
 }
 
 function editcategory($conn,$data,$id){
-    $sql = "UPDATE categorys SET name = '$data' WHERE id = $id";
+    $sql = "UPDATE categories SET name = '$data' WHERE id = $id";
         mysqli_query($conn,$sql);
 
 }

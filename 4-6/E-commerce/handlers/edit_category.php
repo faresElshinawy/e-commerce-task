@@ -16,16 +16,16 @@ if(checkrequestmethod('POST')){
         $errors['name'] = 'category name must be smaller than 10 characters';
     }
     if(empty($errors)){
-        insertnewcategory($conn,$name);
-        redirect('../categorys.php');
+        editcategory($conn,$name,$id);
+        redirect('../categories.php');
         die;
     }else{
         $_SESSION['errors'] = $errors;
-        redirect('../add_category.php');
+        redirect("../edit_category.php?id=$id");
         die;
     }
 }else{
     $_SESSION['errors']['method'] = 'wrong request method';
-    redirect('../add_category.php');
+    redirect("../edit_category.php?id=$id");
     die;
 }

@@ -55,7 +55,7 @@ $conn = db_conn();
 
     // database create categorys table
 
-        $category_table = "CREATE TABLE IF NOT EXISTS `categorys`(
+        $category_table = "CREATE TABLE IF NOT EXISTS `categories`(
             `id` INT PRIMARY KEY AUTO_INCREMENT ,
             `name` VARCHAR(100) NOT NULL ,
             `date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP

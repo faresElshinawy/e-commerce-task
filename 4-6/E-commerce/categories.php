@@ -37,7 +37,7 @@
                 </tfoot>
                     <tbody>
                         <?php
-                            $data = getcategorysinfo($conn);
+                            $data = getcategoriesinfo($conn);
                             while($row = mysqli_fetch_assoc($data)):
                         ?>
                             <tr>

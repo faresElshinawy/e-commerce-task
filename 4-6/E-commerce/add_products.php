@@ -69,7 +69,7 @@
                                 <div class="form-group">
                                     <select name="category_id" id=""  class="form-select text-muted" aria-label="Default select example">
                                         <?php
-                                        $data = getcategorysinfo($conn);
+                                        $data = getcategoriesinfo($conn);
                                         $i = 0;
                                         while($row = mysqli_fetch_assoc($data)):
                                         ?>

@@ -80,7 +80,7 @@
                                 <div class="form-group">
                                     <select name="category_id" id=""  class="form-select text-muted" aria-label="Default select example">
                                         <?php
-                                        $data = getcategorysinfo($conn);
+                                        $data = getcategoriesinfo($conn);
                                         while($row = mysqli_fetch_assoc($data)):
                                         ?>
                                         <option value="<?= $row['id'] ?>" class='from form-control text-muted ' <?php 
