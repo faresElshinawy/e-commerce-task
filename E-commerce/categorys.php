@@ -22,15 +22,17 @@
                     <tr>
                         <th>id</th>
                         <th>name</th>
+                        <th colspan='2'>control</th>
                         <th>date</th>
-                        <th colspan='3'>control</th>
+                        <td>view</td>
                     </tr>
                 </thead>
                 <tfoot>
                         <td>id</td>
                         <td>name</td>
+                        <td colspan='2'>control</td>
                         <td>date</td>
-                        <td colspan='3'>control</td>
+                        <td>view</td>
                 </tr>
                 </tfoot>
                     <tbody>
@@ -41,10 +43,10 @@
                             <tr>
                                 <th><?= $row['id'] ?></th>
                                 <th><?= $row['name'] ?></th>
-                                <th><?= $row['date'] ?></th>
-                                <th><a href="show_category.php?id=<?= $row['id'] ?>" class='btn btn-secondary'>show</a></th>
                                 <th><a href="edit_category.php?id=<?= $row['id'] ?>" class='btn btn-primary'>edit</a></th>
                                 <th><a href="handlers/delete_category.php?id=<?= $row['id'] ?>" class='btn btn-danger'>delete</a></th>
+                                <th><?= $row['date'] ?></th>
+                                <th><a href="show_category.php?id=<?= $row['id'] ?>" class='btn btn-secondary'>show</a></th>
                             </tr>
                             <?php endwhile; ?>
                 </tbody>
