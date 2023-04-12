@@ -1,9 +1,7 @@
 <?php include_once "inc/header.php" ?> 
 <?php include_once "inc/sidebar.php" ?>
 <?php include_once "inc/topbar.php" ?> 
-<?php include_once "core/functions.php" ?> 
-<?php include_once "core/validations.php" ?> 
-<?php include_once "database/conn.php" ?> 
+
 
 <!-- DataTales Example -->
     <div class="container ">

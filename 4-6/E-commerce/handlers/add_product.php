@@ -12,8 +12,8 @@ if(checkrequestmethod('POST')){
         $errors['name'] = 'product name is require'; 
     }elseif(minlen($name,5)){
         $errors['name'] = 'product name must be greater than 5 characters';
-    }elseif(maxlen($name,10)){
-        $errors['name'] = 'product name must be smaller than 10 characters';
+    }elseif(maxlen($name,20)){
+        $errors['name'] = 'product name must be smaller than 20 characters';
     }
     if(requireinput($description)){
         $errors['description'] = 'product description is require'; 

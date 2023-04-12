@@ -1,9 +1,6 @@
 <?php include_once "inc/header.php" ?> 
 <?php include_once "inc/sidebar.php" ?>
 <?php include_once "inc/topbar.php" ?> 
-<?php include_once "database/conn.php" ?> 
-<?php include_once "core/functions.php" ?> 
-<?php include_once "core/validations.php" ?> 
 
 <div class="container-fluid">
 
@@ -33,7 +30,7 @@
                             while($row = mysqli_fetch_assoc($result)):
                                 ?>
                             <tr>
-                                <td><?= $row['id'] ?></td>
+                                <td><?= $row['pro_id'] ?></td>
                                 <td><?= $row['name'] ?></td>
                                 <td><textarea cols="30" rows="2" disabled class='bg-white border-0 text-muted'><?= $row['description'] ?></textarea></td>
                                 <td>

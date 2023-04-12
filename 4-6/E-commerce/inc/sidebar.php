@@ -4,9 +4,6 @@
     }
     
 ?>
-<?php include_once "core/functions.php" ?> 
-<?php include_once "core/validations.php" ?> 
-<?php include_once "database/conn.php" ?> 
     <!-- Page Wrapper -->
     <div id="wrapper">
 

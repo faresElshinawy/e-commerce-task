@@ -4,9 +4,6 @@
     $hide_search_item = true;
     include_once "inc/topbar.php";
 ?> 
-<?php include_once "core/functions.php" ?> 
-<?php include_once "core/validations.php" ?> 
-<?php include_once "database/conn.php" ?> 
 
 
         <!-- Content Wrapper -->
@@ -84,7 +81,7 @@
                                                             while($row = mysqli_fetch_assoc($data)):
                                                         ?>
                                                             <tr>
-                                                                <th><?= $row['id'] ?></th>
+                                                                <th><?= $row['cate_id'] ?></th>
                                                                 <th><?= $row['name'] ?></th>
                                                             </tr>
                                                             <?php endwhile; ?>
@@ -123,7 +120,7 @@
                                                             while($row = mysqli_fetch_assoc($result)):
                                                                 ?>
                                                             <tr>
-                                                                <td><?= $row['id'] ?></td>
+                                                                <td><?= $row['pro_id'] ?></td>
                                                                 <td><?= $row['name'] ?></td>
                                                                 <td><?= $row['price'] ?></td>
                                                                 <td><?= $row['count'] ?></td>

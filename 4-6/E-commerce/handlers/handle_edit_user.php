@@ -62,7 +62,7 @@ if(checkrequestmethod('POST')){
     // image validate
     if(!empty($_FILES['image']['name'])){
         $image_new_name = dealwithimage($_FILES['image'] , '../uploaded');
-        unlink("../uploaded/" . $old_image);
+        unlink("../uploaded/" . $old_name);
     }else{
         $image_new_name = $old_name;
     }
@@ -71,7 +71,10 @@ if(checkrequestmethod('POST')){
     $data = ['id' => $id , 'name' => $firstname . ' ' . $lastname , 'email' => $email , 'password' => $password , 'phone' => $phone , 'address' => $address , 'image' => $image_new_name];
         updateuser($conn,$data);
         if(userauthcheck($conn,$id)){
+            $_SESSION['auth']['name'] = $firstname . ' ' . $lastname ;
             $_SESSION['auth']['image'] = $image_new_name;
+            $_SESSION['auth']['email'] = $email ;
+            $_SESSION['auth']['password'] = $password;
         }
         redirect('../users.php');
         die;

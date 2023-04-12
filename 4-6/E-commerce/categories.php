@@ -1,14 +1,17 @@
 <?php include_once "inc/header.php" ?> 
 <?php include_once "inc/sidebar.php" ?>
 <?php include_once "inc/topbar.php" ?> 
-<?php include_once "core/functions.php" ?> 
-<?php include_once "core/validations.php" ?> 
-<?php include_once "database/conn.php" ?> 
+
 <div class="container-fluid">
 
 <!-- Page Heading -->
 <h1 class="h3 mb-3 text-center text-gray-800">category</h1>
 
+    <!-- categories test function -->
+
+    <?php 
+    // categoriestest($conn);  
+    ?>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -41,12 +44,12 @@
                             while($row = mysqli_fetch_assoc($data)):
                         ?>
                             <tr>
-                                <th><?= $row['id'] ?></th>
+                                <th><?= $row['cate_id'] ?></th>
                                 <th><?= $row['name'] ?></th>
-                                <th><a href="edit_category.php?id=<?= $row['id'] ?>" class='btn btn-primary'>edit</a></th>
-                                <th><a href="handlers/delete_category.php?id=<?= $row['id'] ?>" class='btn btn-danger'>delete</a></th>
+                                <th><a href="edit_category.php?id=<?= $row['cate_id'] ?>" class='btn btn-primary'>edit</a></th>
+                                <th><a href="handlers/delete_category.php?id=<?= $row['cate_id'] ?>" class='btn btn-danger'>delete</a></th>
                                 <th><?= $row['date'] ?></th>
-                                <th><a href="show_category.php?id=<?= $row['id'] ?>" class='btn btn-secondary'>show</a></th>
+                                <th><a href="show_category.php?id=<?= $row['cate_id'] ?>" class='btn btn-secondary'>show</a></th>
                             </tr>
                             <?php endwhile; ?>
                 </tbody>

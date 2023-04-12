@@ -7,7 +7,7 @@ const USER = "root";
 // password
 const PASSWORD = '';
 // database name
-const DB_NAME = 'E-commerce';
+const DB_NAME = 'e-commerce';
 
 // database connection function
 
@@ -38,6 +38,7 @@ $conn = db_conn();
 
 // }
 
+
 //     // database create users table
 
     $user_table = "CREATE TABLE IF NOT EXISTS `users`(
@@ -56,7 +57,7 @@ $conn = db_conn();
     // database create categorys table
 
         $category_table = "CREATE TABLE IF NOT EXISTS `categories`(
-            `id` INT PRIMARY KEY AUTO_INCREMENT ,
+            `cate_id` INT PRIMARY KEY AUTO_INCREMENT ,
             `name` VARCHAR(100) NOT NULL ,
             `date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
@@ -66,14 +67,14 @@ $conn = db_conn();
 //     // database create products table
 
         $product_table = "CREATE TABLE IF NOT EXISTS `products`(
-            `id` INT PRIMARY KEY AUTO_INCREMENT ,
+            `pro_id` INT PRIMARY KEY AUTO_INCREMENT ,
             `name` VARCHAR(100) NOT NULL ,
             `description` VARCHAR(200) NOT NULL ,
             `image` VARCHAR(100) NOT NULL ,
             `count` INT NOT NULL ,
             `price` INT NOT NULL ,
             `category_id` INT NOT NULL,
-            FOREIGN KEY (category_id) REFERENCES categorys(id),
+            FOREIGN KEY (category_id) REFERENCES categories(cate_id),
             `date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
         mysqli_query($conn,$product_table);

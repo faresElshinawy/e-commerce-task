@@ -1,61 +1,39 @@
 <?php include_once "inc/header.php" ?> 
 <?php include_once "inc/sidebar.php" ?>
-<?php include_once "inc/topbar.php" ?> 
-<?php include_once "database/conn.php" ?> 
-<?php include_once "core/functions.php" ?> 
-<?php include_once "core/validations.php" ?> 
+<?php include_once "inc/topbar.php" ?>  
+
+<!-- Page Heading -->
+<?php
+    $count = getproductcount($conn);
+?>
+
+<div class="card shadow mb-4">
+            <h1 class="h3 mb-5 mt-5 text-center text-gray-800">Products  (<?= $count ?>)</h1>
+            <div class="card-body">
 
 <div class="container-fluid">
 
-<!-- Page Heading -->
-<h1 class="h3 mb-3 text-center text-gray-800">Products</h1>
-
-
-<!-- DataTales Example -->
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary text-center"> products</h6>
-    </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <td>name</td>
-                        <td>description</td>
-                        <td>image</td>
-                        <td>price</td>
-                        <td>count</td>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <td>name</td>
-                        <td>description</td>
-                        <td>image</td>
-                        <td>price</td>
-                        <td>count</td>
-                    </tr>
-                </tfoot>
-                <tbody>
+    <div class="d-flex justify-content-center flex-wrap ">
                         <?php 
                             $result = getproductsinfo($conn);
                             while($row = mysqli_fetch_assoc($result)):
                                 ?>
-                            <tr>
-                                <td><?= $row['name'] ?></td>
-                                <td><textarea cols="30" rows="2" disabled class='bg-white border-0 text-muted'><?= $row['description'] ?></textarea></td>
-                                <td>
-                                    <img src="uploaded/<?= $row['image'] ?>" alt="" width='120' height='120'>
-                                </td>
-                                <td><?= $row['price'] ?></td>
-                                <td><?= $row['count'] ?></td>
-                                </tr>
-                        <?php endwhile; ?>
-                </tbody>
-            </table>
-        </div>
+                                <div class="card m-3  " style="width: 18rem;">
+                                <div class='overflow-y-hidden'>
+                                    <img src="uploaded/<?= $row['image'] ?>" class="img-fluid" alt="..." >
+                                </div>
+                                <div class="card-body" height='20rem'>
+                                        <h5 class="card-title"><?= $row['name'] ?></h5>
+                                        <p class="card-text"><?= $row['description'] ?></p>
+                                        <p class="text-danger"><span class="text-dark">PRICE : </span> <?= $row['price'] ?></p>
+                                        <a href="show_shop_product.php?id=<?= $row['pro_id'] ?>" class="btn btn-success">show</a>
+                                    </div>
+                            </div>
+                            <?php endwhile; ?>
     </div>
 </div>
 </div>
+    </div>
+</div>
+
 <?php include_once "inc/footer.php" ?> 
